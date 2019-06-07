@@ -1,85 +1,30 @@
+.container {
+    border: 2px solid rgb(27, 121, 85);
+    position: static;
+    left:10%;
+    margin: 10px 10px 0px 10px;
+}
 nav {
-    width: 200px;
-    height: 210px;
-    position relative;
-    border: 3px solid #CE8DAB;
-    float: left;
-    margin: 10px;
-    padding: 0;
-    }
-    
-    li {
-    color: #FAE0EB;
-    font-family: Roboto;
-    font-size: 14px;
-    text-align: left;
-    margin 15px;
-    }
-    
-    .section1 {
-    margin: 0px;
-    padding: 20px;
-    width: 1060px;
-    height: 50px;
+    border: 2px solid rgb(221, 13, 221);
     position: absolute;
-    top: 20px;
-    left: 230px;
-    border: 5px solid #FBC338;
-    color: black;
-    font-family: Roboto;
-    font-size: 13px;
-    text-align: left;
-    }
-    
-    .section2 {
-    margin: 0px;
-    padding: 20px;
-    background-color: #E7ECE8;
-    width: 1060px;
-    height: 60px;
-    position: absolute;
-    top: 80px;
-    left: 230px;
-    border: 5px solid #FBC338;
-    color: black;
-    font-family: Roboto;
-    font-size: 13px;
-    text-align: left;
-    }
-    
-    .section3 {
-    margin: 0px;
-    padding: 20px;
-    width: 1060px;
-    height: 20px;
-    position: absolute;
-    top: 190px;
-    left: 230px;
-    border: 5px solid #FBC338;
-    color: black;
-    font-family: Roboto;
-    font-size: 13px;
-    text-align: left;
-    }
-    
-    span {
-    background-color: #E7ECE8;
-    color: black;
-    font-family: Arial;
-    font-size: 11px;
-    }
-    
-    footer {
-    margin: 0px;
-    padding: 20px;
-    width: 1280px;
-    height: 30px;
-    position: absolute;
-    top: 270px;
-    left: 10px;
-    border: 5px solid #FBC338;
-    color: black;
-    font-family: Roboto;
-    font-size: 13px;
+    padding-right:10px;
+}
+section {
+    border: 2px solid #ffd000;
+    margin-left: 125px;
+    display: block;
+    width: auto;
+    padding: 12px 15px 12px 15px;
+}
+footer{
+    border:2px solid rgb(75, 172, 75);
     text-align: center;
-    }
+    height: 50px;
+    padding-top:20px;
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+section:nth-child(odd){
+    background-color: whitesmoke;
+}
