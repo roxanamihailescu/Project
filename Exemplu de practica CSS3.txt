@@ -1,0 +1,41 @@
+	<!DOCTYPE html>
+	<head>
+	  <title>Positioning </title>
+	  <link rel="stylesheet" href="CSS/style3.css"/>
+	  <body>
+	    <div class="container">
+	      <nav>
+	        <ul>
+	          <li>Home</li>
+	          <li>Taco Menu</li>
+	          <li>Draft list</li>
+	          <li>Hours</li>
+	          <li>Directions</li>
+	          <li>Contact</li>
+	        </ul>
+	      </nav>
+	      <section>
+	        Atunci cand hotarasti sa te relaxezi, devii constient de toata tensiunea acumulata in corpul tau, tensiune pe care inainte nici macar nu o observai.
+Rezultatul este ca nu te vei simti relaxat, ba chiar vei dori sa revii la activitatile tale pentru a te simti mai bine.
+In acest sens, cheia este sa continui sa ramai in starea respectiva deoarece aceste senzatii se vor diminua gradat.
+Dupa cateva minute, te vei simti mai calm si mai relaxat.
+	      </section>
+	      <section>
+	        Important este sa descoperi ce te ajuta cu adevarat sa te relaxezi.
+Simlul fapt de a sta si de a nu face nimic s-ar putea sa nu functioneze pentru toata lumea.
+Poate ca pentru altii, adevarata relaxare consta intr-o plimbare in natura, in a medita sau in a sta in bratele persoanei iubite.
+	      </section>
+	      <section> Una dintre cele mai mari provocari cu care ne confruntam cand vine vorba de relaxare este sa gasim timpul pentru aceasta activitate.
+Noi simtim ca nu avem niciodata suficient timp pentru a face tot ceea ce ne propunem.
+Tocmai de aceea ne este foarte greu sa gasim timp pentru relaxare.
+Ceea ce nu constientizam este ca atunci cand vom gasi suficient timp pentru a ne relaxa, ne putem incarca bateriile astfel incat sa realizam ceea ce ne-am propus.
+Solutie: Fa din relaxare o prioritate!
+Asculta muzica de relaxare sau pur si simplu du-te la un masaj de relaxare.
+Alege o activitate care sa te deconecteze de tot ceea ce este in jurul tau si vei vedea cat de repede vor veni beneficiile acestei decizii.
+</section>
+	    <footer>Footer text yall</footer>
+	    </div>
+	  </body>
+	</head>
+
+
