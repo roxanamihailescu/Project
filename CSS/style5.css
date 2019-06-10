@@ -1,0 +1,35 @@
+
+
+
+div {
+    background-image: url("gigi.JPG");
+    background-size: 280px 200px;
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    margin: 20px;
+    border: 5px dotted blue;
+    background-clip: content-box;
+    position: relative;
+    top: 0px;
+    margin-left: 33%;
+    
+}
+section {
+    border: 2px solid #ffd000;
+    margin-left: 25px;
+    width: 100%;
+    position: relative;
+    top: 80px;
+    left: 10px
+}
+footer{
+    border:2px solid rgb(75, 172, 75);
+    text-align: center;
+    width: 90%;
+    position: relative;
+    top: 130px;
+    left: 10px;
+}
+section:nth-child(odd){
+    background-color: whitesmoke;
+}

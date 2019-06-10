@@ -1,0 +1,35 @@
+{box-sizing: border-box;}
+nav {
+    width: 20%;
+    height: 129px;
+    border: 2px solid rgb(221, 13, 221);
+    float: left;
+    position: relative;
+}
+section {
+    width: 78%;
+    height: 60px;
+    border: 2px solid #ffd000;
+    position: relative;
+    float: right;
+    }
+
+.sectiondown {
+    width: 100%;
+    height: 60px;
+    border: 2px solid #ffd000;
+    position: relative;
+    float: left;
+}
+footer{
+    width: 100%;
+    height: 60px;
+    border:2px solid rgb(75, 172, 75);
+    text-align: center;
+    height: 50px;
+    position: relative;
+    float: left;
+}
+section:nth-child(odd){
+    background-color: whitesmoke;
+}
