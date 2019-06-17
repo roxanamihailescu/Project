@@ -1,0 +1,21 @@
+$primary: #ff0000;
+$secondary: blue;
+$offdet:200px;
+
+
+.square {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  transition: background-color 3s linear, transform 3s linear;
+  animation: flip 2s ease-in-out;
+}
+&:hover {
+background-color: $secondary;
+    }
+    @key-frames flip {
+      0% {
+        transform:rotateX(0) rotateY(0);
+        
+      }
+    }

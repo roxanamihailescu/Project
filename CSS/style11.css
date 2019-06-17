@@ -1,0 +1,20 @@
+.square {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  transition: width 2s ease 2s;
+}
+
+  .square1 {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    transition: width 2s ease;
+}
+
+.Container:hover .square {
+    width: 300px; 
+  }
+  .Container:hover .square1 {
+    width: 300px;
+  }
