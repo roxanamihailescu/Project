@@ -45,10 +45,24 @@
 // /Partea a treia de practica////
 //  var age =17;
 // //1//
-//  for (var i = 0; i < 100; i++) {
+//  for (var i = 1; i <= 100; i++) {
 // console.log(i);
- }
-// //2//
- for (var i = 0; i < 100; i = i+2) {
-  console.log(i);
+//  }
+// // //2//
+//  for (var i = 0; i < 100; i = i+2) {
+//   console.log(i);
+//    }
+//Partea a patra de practica//
+
+// let j = 1;
+// while (j <= 100) {
+//   console.log(j);
+//   j++;
+//    }
+
+   //Partea a cincea de practica//
+   let j = 0;
+while (j < 100) {
+  console.log(j);
+  j=j+1;
    }
