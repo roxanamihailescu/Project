@@ -1,0 +1,292 @@
+.wrapper {
+  width: 100%;
+  height: 700px;
+  background-color: #D8B07E;
+  position: relative;
+}
+
+.card-1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  -webkit-animation-name: ex1;
+          animation-name: ex1;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.card-2 {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  -webkit-animation-name: ex2;
+          animation-name: ex2;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.card-3 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  -webkit-animation-name: ex3;
+          animation-name: ex3;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes ex1 {
+  0% {
+    top: 10%;
+  }
+  25% {
+    top: 15%;
+  }
+  50% {
+    top: 20%;
+  }
+  75% {
+    top: 25%;
+  }
+  100% {
+    top: 30%;
+  }
+}
+
+@keyframes ex1 {
+  0% {
+    top: 10%;
+  }
+  25% {
+    top: 15%;
+  }
+  50% {
+    top: 20%;
+  }
+  75% {
+    top: 25%;
+  }
+  100% {
+    top: 30%;
+  }
+}
+
+@-webkit-keyframes ex2 {
+  0% {
+    top: 10%;
+  }
+  25% {
+    top: 15%;
+  }
+  50% {
+    top: 20%;
+  }
+  75% {
+    top: 25%;
+  }
+  100% {
+    top: 30%;
+  }
+}
+
+@keyframes ex2 {
+  0% {
+    top: 10%;
+  }
+  25% {
+    top: 15%;
+  }
+  50% {
+    top: 20%;
+  }
+  75% {
+    top: 25%;
+  }
+  100% {
+    top: 30%;
+  }
+}
+
+@-webkit-keyframes ex3 {
+  0% {
+    top: 10%;
+  }
+  25% {
+    top: 15%;
+  }
+  50% {
+    top: 20%;
+  }
+  75% {
+    top: 25%;
+  }
+  100% {
+    top: 30%;
+  }
+}
+
+@keyframes ex3 {
+  0% {
+    top: 10%;
+  }
+  25% {
+    top: 15%;
+  }
+  50% {
+    top: 20%;
+  }
+  75% {
+    top: 25%;
+  }
+  100% {
+    top: 30%;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  height: 700px;
+  background-color: #D8B07E;
+  position: relative;
+}
+
+.card-1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  -webkit-animation-name: ex1;
+          animation-name: ex1;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.card-2 {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  -webkit-animation-name: ex2;
+          animation-name: ex2;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.card-3 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  -webkit-animation-name: ex3;
+          animation-name: ex3;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@keyframes ex1 {
+  0% {
+    top: 10%;
+  }
+  25% {
+    top: 15%;
+  }
+  50% {
+    top: 20%;
+  }
+  75% {
+    top: 25%;
+  }
+  100% {
+    top: 30%;
+  }
+}
+
+@keyframes ex2 {
+  0% {
+    top: 10%;
+  }
+  25% {
+    top: 15%;
+  }
+  50% {
+    top: 20%;
+  }
+  75% {
+    top: 25%;
+  }
+  100% {
+    top: 30%;
+  }
+}
+
+@keyframes ex3 {
+  0% {
+    top: 10%;
+  }
+  25% {
+    top: 15%;
+  }
+  50% {
+    top: 20%;
+  }
+  75% {
+    top: 25%;
+  }
+  100% {
+    top: 30%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
