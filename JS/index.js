@@ -45,19 +45,25 @@
 // }
 
 // =========
-var array = ["a cute feline", "best friend of man","gives us milk"];
-var dictionary = {
-    cat: "a cute feline",
-    dog: "best friend of man",
-    cow: "gives us milk",
-    "mustar de Tecuci": 10,
-     ":)": "smiley",
-};
-console.log(array[2]);
-console.log(dictionary.cat);
-console.log(dictionay["cat"]);
-console.log(dictionay["mustar de Tecuci"]);
+// var array = ["a cute feline", "best friend of man","gives us milk"];
+// var dictionary = {
+//     cat: "a cute feline",
+//     dog: "best friend of man",
+//     cow: "gives us milk",
+//     "mustar de Tecuci": 10,
+//      ":)": "smiley",
+// };
+// console.log(array[2]);
+// console.log(dictionary.cat);
+// console.log(dictionay["cat"]);
+// console.log(dictionay["mustar de Tecuci"]);
 
-console.log(dictionay["smiley"]);
-// ======
+// console.log(dictionay["smiley"]);
+// // ======
 
+function add(a, b) {
+    const dif = a - b;
+    console.log("dif=", dif);
+}
+add(4, 0);
+add(7, 4);
