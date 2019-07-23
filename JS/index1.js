@@ -117,19 +117,54 @@
 //  Console.log(diff10(3)) rezulta 7
 //  Console.log(diff10(5)) rezulta 5
 ///
-// asta este functia standard
- function makeDiff(d) {
+// // asta este functia standard
+//  function makeDiff(d) {
 
-    function inner(s) {
-        return d - s;
-    }
-     return inner;
- }
+//     function inner(s) {
+//         return d - s;
+//     }
+//      return inner;
+//  }
 
 
-const diff10 = makeDiff(10);
-Console.log(diff10(3));
-// rezultat 7
-// sau
-// console.log(makeDiff(10)(3));
-// rezultat 7
+// const diff10 = makeDiff(10);
+// Console.log(diff10(3));
+// // rezultat 7
+// // sau
+// // console.log(makeDiff(10)(3));
+// // rezultat 7
+
+// exemplu de azi 09.07 la module
+
+
+var laura = atm(3000);
+
+function atm(initialBalance) {
+  var balance = initialBalance;
+
+  function deposit(amount) {
+    return (balance += amount);
+  }
+
+  function withdraw(amount) {
+    return (balance -= amount);
+    balance = balance - amount;
+    return balance;
+  }
+
+  function showBalance() {
+      return balance;
+  }
+
+  return {
+    deposit,
+    withdraw,
+    balance,
+    showBalance
+  };
+}
+
+laura.deposit(4000);
+laura.withdraw(1000);
+console.log(laura.balance);
+console.log(laura.showBalance());
