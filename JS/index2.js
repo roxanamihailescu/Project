@@ -1,170 +1,297 @@
-// {
-//     var b = 1;
-//   }
-  
-//   console.log(b);
-  
-//   var a = 1;
-  
-//   function foo() {
-//     var a = 10;
-//     console.log(a);
-//   }
-  
-//   // console.log(a);
-//   // foo();
-//   var i = 10;
-//   // for (var i = 0; i < 5; i++) {
-//   // 
-//   // }
-  
-//   // console.log(i);
-//   //
-// //   rezultat 5
-// // //   daca vrem sa fie 10 schimbam var cu let si atunci rezultatul va fi de la 0 la 4 si i din global scope 10
-// si adaugam si un console.log(i); in interior
-// var i = 10;
-//   // for (var i = 0; i < 5; i++) {
-//   // console.log(i);
-//   // }
-  
-//   // console.log(i);
-
-// ****
-//   if ( 3 > 2) {
-//       var x = 2;
-//       let y = 2;
-//   }
-  
-//   console.log(x); //2
-//   console.log(y); // error reference
-
-//   *****
-
-// function testFn() {
-//  var x = 2;
-//  let y = 3;
-//   }
-
-// testFn()
-// //console.log(x);
-// // console.log(y);
-
-// // ****
-// alt exemplu
-
-// const arr = [];
-// for (let i = 0; i < 2; i++) {
-//   arr.push(i);
-// }
-
-// console.log(arr);
-
-// rezultatul este [0,1]
-
-// alt exemplu
-
-// const arr = [];
-// // for (var i = 0; i < 2; i++) {
-// //   arr.push(i);
-// // }
-
-// // console.log(arr);
-
-// // rezultatul este [0,1]
-
-// alt exemplu
-
-// function testFn() {
-// var x = 2;
-// for (var i = 0; i < 5; i++) {
-// let y = 3;
-//  }
-    
-// console.log(x);
-// console.log(y);
-
-// }
-//  testFn();
-
-//  pentru linia 85 ne da eroare ca nu are valoare
-
-// alt exemplu
-
-// var x = 10;
-// function testFn() {
-//     for (var i =0; i < 1; i++) {
-//         var y = 3;
-//         if (y === 3) {
-//             var x = 2
-//         }
-//     }
-//     console.log(x);
-//     console.log(y);
-       
-// }
-
-// console.log(x);
-// testFn();
-
-
-//Functii in interiorul unei functii//
-//  exemplu la closure
-
-//  creati o functie numita makediff care primeste un argument si returneaza o alta functie
-
-//  const Diff10 = makeDiff(10)
-//  Console.log(diff10(3)) rezulta 7
-//  Console.log(diff10(5)) rezulta 5
-///
-// // asta este functia standard
-//  function makeDiff(d) {
-
-//     function inner(s) {
-//         return d - s;
-//     }
-//      return inner;
-//  }
-
-
-// const diff10 = makeDiff(10);
-// Console.log(diff10(3));
-// // rezultat 7
-// // sau
-// // console.log(makeDiff(10)(3));
-// // rezultat 7
-
-// exemplu de azi 09.07 la module
-
-
-var laura = atm(3000);
-
-function atm(initialBalance) {
-  var balance = initialBalance;
-
-  function deposit(amount) {
-    return (balance += amount);
-  }
-
-  function withdraw(amount) {
-    return (balance -= amount);
-    balance = balance - amount;
-    return balance;
-  }
-
-  function showBalance() {
-      return balance;
-  }
-
-  return {
-    deposit,
-    withdraw,
-    balance,
-    showBalance
+function MusicPlayer(initialPlaylist = []) {
+  this.playlist = initialPlaylist;
+  this.play = function(position = 0) {
+    console.log("Now playing: ", this.playlist[position]);
   };
 }
 
-laura.deposit(4000);
-laura.withdraw(1000);
-console.log(laura.balance);
-console.log(laura.showBalance());
+var playlist = [
+  "Nicu Alifantis - Spala rana",
+  "Dan Ciotoi - S-a rupt lantul de iubire",
+  "Drake - Fructul Pasiunii"
+];
+var SporifyU = new MusicPlayer(playlist);
+SporifyU.play();
+
+//urmatorul exemplu cu alta proprietate//
+
+function MusicPlayer(initialPlaylist = []) {
+  this.playlist = initialPlaylist;
+  this.currentlyPlaying = this.playlist[0];
+  this.play = function(position = 0) {
+    this.currentlyPlaying = this.playlist[position];
+    console.log("Now playing: ", this.playlist[position]);
+  };
+  this.addToPlaylist = function(melodie) {
+    this.playlist.push(melodie);
+    console.log("Added to playlist:", melodie);
+  };
+
+  this.removeFromPlaylist = function(melodie) {
+    var position = this.playlist.indexOf(melodie);
+    this.playlist.splice(position, 1);
+  };
+
+  this.showPlaylist = function() {
+    console.log("===== Playlist ====");
+    this.playlist.forEach(function(value) {
+      console.log(value);
+    });
+    console.log("===== End of Playlist ====");
+  };
+}
+
+var playlist = [
+  "Nicu Alifantis - Spala rana",
+  "Dan Ciotoi - S-a rupt lantul de iubire",
+  "Drake - Fructul Pasiunii"
+];
+var SporifyU = new MusicPlayer(playlist);
+// SporifyU.play(2);
+SporifyU.addToPlaylist("Macanache - Sefu");
+// SporifyU.showPlaylist();
+SporifyU.removeFromPlaylist("Drake - Fructul Pasiunii");
+SporifyU.showPlaylist();
+
+
+/// alt exemplu mai simplu///
+function MusicPlayer(initialPlaylist = []) {
+  this.playlist = initialPlaylist;
+  this.currentlyPlaying = this.playlist[0];
+  this.play = function(position = 0) {
+    this.currentlyPlaying = this.playlist[position];
+    console.log("Now playing: ", this.playlist[position]);
+  };
+  this.addToPlaylist = function(melodie) {
+    this.playlist.push(melodie);
+    console.log("Added to playlist:", melodie);
+  };
+
+  this.removeFromPlaylist = function(melodie) {
+    this.playlist = this.playlist.filter(function(value) {
+      return value !== melodie;
+    });
+  };
+
+  this.showPlaylist = function() {
+    console.log("===== Playlist ====");
+    this.playlist.forEach(function(value) {
+      console.log(value);
+    });
+    console.log("===== End of Playlist ====");
+  };
+}
+
+var playlist = [
+  "Nicu Alifantis - Spala rana",
+  "Dan Ciotoi - S-a rupt lantul de iubire",
+  "Drake - Fructul Pasiunii"
+];
+var SporifyU = new MusicPlayer(playlist);
+// SporifyU.play(2);
+SporifyU.addToPlaylist("Macanache - Sefu");
+// SporifyU.showPlaylist();
+SporifyU.removeFromPlaylist("Drake - Fructul Pasiunii");
+SporifyU.showPlaylist();
+//////////alt exemplu/////////
+function MusicPlayer(initialPlaylist = []) {
+  this.playlist = initialPlaylist;
+  this.currentlyPlaying = this.playlist[0];
+  this.play = function(position = 0) {
+    this.currentlyPlaying = this.playlist[position];
+    console.log("Now playing: ", this.playlist[position]);
+  };
+  this.addToPlaylist = function(melodie) {
+    this.playlist.push(melodie);
+    console.log("Added to playlist:", melodie);
+  };
+
+  this.removeFromPlaylist = function(melodie) {
+    this.playlist = this.playlist.filter(function(value) {
+      return value !== melodie;
+    });
+  };
+
+  this.showPlaylist = function() {
+    console.log("===== Playlist ====");
+    this.playlist.forEach(function(value) {
+      console.log("*", value);
+    });
+    console.log("===== End of Playlist ====");
+  };
+
+  this.nextTrack = function() {
+    var currentPosition = this.playlist.indexOf(this.currentlyPlaying);
+    var nextPosition = currentPosition + 1;
+    console.log("Next Track is: ", this.playlist[nextPosition]);
+  };
+}
+
+var playlist = [
+  "Nicu Alifantis - Spala rana",
+  "Dan Ciotoi - S-a rupt lantul de iubire",
+  "Drake - Fructul Pasiunii"
+];
+var SporifyU = new MusicPlayer(playlist);
+SporifyU.addToPlaylist("Macanache - Sefu");
+console.log("Now Playing: ", SporifyU.currentlyPlaying);
+SporifyU.play(2);
+SporifyU.nextTrack();
+// console.log("Now Playing: ", SporifyU.currentlyPlaying);
+// SporifyU.showPlaylist();
+// SporifyU.removeFromPlaylist("Drake - Fructul Pasiunii");
+// SporifyU.showPlaylist();
+///if else ///
+function MusicPlayer(initialPlaylist = []) {
+  this.playlist = initialPlaylist;
+  this.currentlyPlaying = this.playlist[0];
+  this.play = function(position = 0) {
+    this.currentlyPlaying = this.playlist[position];
+    console.log("Now playing: ", this.playlist[position]);
+  };
+  this.addToPlaylist = function(melodie) {
+    this.playlist.push(melodie);
+    console.log("Added to playlist:", melodie);
+  };
+
+  this.removeFromPlaylist = function(melodie) {
+    this.playlist = this.playlist.filter(function(value) {
+      return value !== melodie;
+    });
+  };
+
+  this.showPlaylist = function() {
+    console.log("===== Playlist ====");
+    this.playlist.forEach(function(value) {
+      console.log("*", value);
+    });
+    console.log("===== End of Playlist ====");
+  };
+
+  this.nextTrack = function() {
+    var currentPosition = this.playlist.indexOf(this.currentlyPlaying);
+    var nextPosition = currentPosition + 1;
+    if (nextPosition > this.playlist.length - 1) {
+      console.log("Next Track is: ", this.playlist[0]);
+    } else {
+      console.log("Next Track is: ", this.playlist[nextPosition]);
+    }
+  };
+}
+
+var playlist = [
+  "Nicu Alifantis - Spala rana",
+  "Dan Ciotoi - S-a rupt lantul de iubire",
+  "Drake - Fructul Pasiunii"
+];
+var SporifyU = new MusicPlayer(playlist);
+// SporifyU.addToPlaylist("Macanache - Sefu");
+console.log("Now Playing: ", SporifyU.currentlyPlaying);
+SporifyU.play(2);
+SporifyU.nextTrack();
+// console.log("Now Playing: ", SporifyU.currentlyPlaying);
+// SporifyU.showPlaylist();
+// SporifyU.removeFromPlaylist("Drake - Fructul Pasiunii");
+// SporifyU.showPlaylist();
+
+
+//ssss//
+function MusicPlayer(initialPlaylist = []) {
+  this.playlist = initialPlaylist;
+  this.currentlyPlaying = this.playlist[0];
+  this.play = function(position = 0) {
+    this.currentlyPlaying = this.playlist[position];
+    console.log("Now playing: ", this.playlist[position]);
+  };
+  this.addToPlaylist = function(melodie) {
+    this.playlist.push(melodie);
+    console.log("Added to playlist:", melodie);
+  };
+
+  this.removeFromPlaylist = function(melodie) {
+    this.playlist = this.playlist.filter(function(value) {
+      return value !== melodie;
+    });
+  };
+
+  this.showPlaylist = function() {
+    console.log("===== Playlist ====");
+    this.playlist.forEach(function(value) {
+      console.log("*", value);
+    });
+    console.log("===== End of Playlist ====");
+  };
+
+  this.nextTrack = function() {
+    var currentPosition = this.playlist.indexOf(this.currentlyPlaying);
+    var nextPosition = currentPosition + 1;
+    if (nextPosition > this.playlist.length - 1) {
+      console.log("Next Track is: ", this.playlist[0]);
+    } else {
+      console.log("Next Track is: ", this.playlist[nextPosition]);
+    }
+  };
+}
+
+var playlist = [
+  "Nicu Alifantis - Spala rana",
+  "Dan Ciotoi - S-a rupt lantul de iubire",
+  "Drake - Fructul Pasiunii"
+];
+var SporifyU = new MusicPlayer(playlist);
+// SporifyU.addToPlaylist("Macanache - Sefu");
+console.log("Now Playing: ", SporifyU.currentlyPlaying);
+SporifyU.play(2);
+SporifyU.nextTrack();
+// console.log("Now Playing: ", SporifyU.currentlyPlaying);
+// SporifyU.showPlaylist();
+// SporifyU.removeFromPlaylist("Drake - Fructul Pasiunii");
+// SporifyU.showPlaylist();
+///o noua functie bind///
+function greet() {
+  console.log(this.name);
+}
+
+var obj = {
+  name: "Rox"
+};
+
+var newGreet = greet.bind(obj);
+newGreet();
+// greet();
+///exemplu Roxana bind//
+var obj = {
+  name: "Bogdan"
+};
+
+function greet() {
+  console.log(this.name);
+}
+
+// var greetRoxana = greet.bind(obj);
+// greetRoxana();
+greet();
+greet.call(obj);
+
+//functia call si apply//
+var obj = {
+  name: "Bogdan"
+};
+
+function greet() {
+  console.log(this.name);
+}
+
+function fn(p1, p2) {
+  console.log(this.name, p1, p2);
+}
+
+// var greetRoxana = greet.bind(obj);
+// greetRoxana();
+// greet.apply(obj)
+
+fn.call(obj, 2, "Ion");
+fn.apply(obj, [2, "Ion"]);
+
+
+
