@@ -123,3 +123,88 @@ var {
 console.log(detailsAge, age, firstName);
 
 
+//exemplu pentru array-destructurare //
+var arr1 = [1, 4, 9];
+var arr2 = [2, 3, 8];
+
+var [, , , b = 0] = arr1;
+console.log(b);
+
+
+////alt exemplu///
+function useCeva(stare=0) {
+  var state = stare;
+
+  return [
+    state,
+    function(param) {
+      console.log(state + param);
+    },
+  ];
+}
+//********//exemplu
+var [stareaMea, logeazaStare] = useCeva(2000);
+logeazaStare(2);
+console.log(stareaMea);
+
+///exemplu practica pentru rest// similar cu spread
+
+var obj2 = {
+  firstName: "Dana",
+  lastName: "M",
+  age: 200,
+  height: 180,
+  kg: 70,
+
+};
+var {firstName, ...rest} = obj2;
+console.log(firstName, age, rest);
+//rest este o conventie, poate fi trecut si orice altceva ca si mustar)
+var { firstName, age, ...mustar } = obj2;
+
+console.log(firstName, age, mustar);
+
+///exemplu de practica pentru rest functii///
+function fn(p1, p2, p3, p4, p5) {...}
+fn(p1, p2, ...rest) {
+
+};
+
+exemplu
+fn(3, 1, 7, 8, 0, -5, 10)
+fn(1, -1)
+
+//sau//
+console.log(Math.min(3, 1, 7, 8, 0, -5, 10));
+console.log(Math.min(1, -1));
+
+//sau//
+
+mfunction myMin() {
+  console.log(...arguments);
+}
+myMin(3, 1, 7, 8, 0, -5, 10);
+myMin(1, -1);
+
+
+//sau//
+
+///arrow function- exemplu///
+
+var sum = (a, b) => {
+  return a + b;
+};
+
+var car = {
+  name: "Tesla",
+  model: "Model S",
+  showCar: function() {
+    console.log(this.name + " " + this.model);
+  },
+  showCar2: () => console.log(this.name + " " + this.model),
+};
+
+car.showCar();
+// car.showCar2();
+
+
