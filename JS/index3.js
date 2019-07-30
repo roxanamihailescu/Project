@@ -208,3 +208,95 @@ car.showCar();
 // car.showCar2();
 
 
+***********
+
+var matrix = {
+  neo: 'Keanu Reeves',
+  morpheus: 'Laurence Fishburne',
+  trinity: 'Carie Anne',
+  details: {
+    year: 1999,
+    rating: 8.7
+  }
+};
+// var realeaseYear = matrix.details.year;
+// var morpheus = matrix.morpheus;
+// var neo = matrix.neo;
+
+// console.log(morpheus, releaseYear);
+var {...rest } = matrix;
+console.log(rest);
+
+
+
+console.log(k) console.log(matrix.neo[0]);
+
+// ca si rezultat imi reda K
+
+sau
+var {
+ neo: [, , , n]
+}
+console.log(neo);
+
+arrow function
+
+function sum(a, b) {
+  console.log('Rezultatul adunarii este:');
+  return a + b;
+};
+  sau 
+
+let sumGras = (a,b) => {
+  console.log('Rezultatul adunarii este:', this);
+  return a + b;
+};
+
+alt exemplu
+
+var obj = {
+  fn: () => {
+  }
+};
+  sau 
+  var obj = {
+  fn: function() {
+    console.log(this);
+  }
+};
+//
+Bank account - exemplu
+
+Solutie pentru a nu se multiplica cele 3 functii: definim functiile separat
+//
+function deposit () {}
+function withdraw () {}
+function showBalance () {}
+
+//exemplu//
+
+class BankAccount {
+  constructor(name.initialBalance) {
+    this.name = name;
+    this.balance = initialBalance;
+  }
+
+  deposit(amount) {
+    this.balance += amount;
+  }
+  withdraw(amount) {
+    this.balance -=amount;
+  }
+  showBalance() {
+    console.log('Account name: $(this.name) \nBalance: $(this.balance) de RON');
+  }
+  static getBankBalance(){
+    console.log('Ramai uimit!!!!\nBanca X are ratele cele mai bune!!!!');
+  }
+}
+const acc = new BankAccount('Bogdan', 20000);
+acc.deposit(2000);
+BankAccount.getBankBalance();
+acc.showBalance();
+
+///Practice Object Create///
