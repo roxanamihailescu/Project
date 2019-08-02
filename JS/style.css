@@ -1,0 +1,9 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  background-color: greenyellow;
+  border: 1px solid greenyellow;
