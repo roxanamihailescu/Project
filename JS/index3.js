@@ -318,3 +318,5 @@ function createObj(protoObj) {
 var acc = createObj(bam);
 console.log(acc);
 console.log(Object.getPrototypeOf(acc));
+
+//Practica DOM Manipulation//
