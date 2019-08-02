@@ -299,4 +299,22 @@ acc.deposit(2000);
 BankAccount.getBankBalance();
 acc.showBalance();
 
-///Practice Object Create///
+///Practice Obiect///////-o functie care copiaza createObj///
+
+var bam = {
+  withdraw: 'withdraw',
+  deposit: 'deposit',
+  showBalance:'showBalance'
+}
+function createObj(protoObj) {
+  function solutiamea() {
+    solutiamea.prototype = protoObj;
+    return new solutiamea();
+  }                                              
+  var o = {};
+  return o;
+}
+
+var acc = createObj(bam);
+console.log(acc);
+console.log(Object.getPrototypeOf(acc));
