@@ -26,3 +26,5 @@
  
 ///traversarea DOMULUI///
 
+//09.08.2019
+// Practica event in java script//
