@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Form validation</title>
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+	<h1>Get your own Site 42 Sites account in seconds</h1>
+    <form>
+      <div id="field">
+        <label for="username">USERNAME:</label><br />
+        <input type="text" id="username" name="username" required /><br />
+        <span>(Must be at least 4 characters, letters and number only)</span
+        ><br />
+        <br />
+        <label for="email">EMAIL ADRESS:</label><br />
+        <input type="email" id="email" name="email" required /><br />
+        <span
+          >We send your registration email to this address.(Double-check your
+          email address before continuing)</span
+        >
+        <br />
+        <br />
+        <label for="firstName">FIRST NAME:</label><br />
+        <input type="text" id="firstName" name="firstName" required /><br />
+        <span>(Must be input.)</span>
+        <br />
+        <br />
+        <label for="lastName">LAST NAME:</label><br />
+        <input type="text" id="lastname" name="lastname" required /><br />
+        <span>(Must be input.)</span>
+        <br />
+        <br />
+        <label for="nickName">NICKNAME:</label><br />
+        <input type="text" id="nickName" name="nickName" required /><br /><br />
+        <label for="phone">PHONE:</label><br />
+        <input type="number" id="phone" name="phone" required /><br />
+        <span>(Must be at least characters, numbers only)</span>
+        <br />
+      </div>
+      <div id="radio">
+        <input type="radio" id="huey" name="drone" value="huey" checked />
+        <label for="huey">GIMME A SITE!</label><br />
+
+        <input type="radio" id="dewey" name="drone" value="dewey" />
+        <label for="dewey">JUST A USERNAME, PLEASE</label>
+      </div>
+      <button id="button">NEXT</button>
+    </form>
+
+	<script src="src/index.js">
+	</script>
+</body>
+
+</html>
